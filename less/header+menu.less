@@ -1,0 +1,197 @@
+.header {
+  &&--fullscreen {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(166, 66, 0, 0.75),rgba(253, 119, 0, 0.75)),
+                url(../img/bg/bg-fullscreen__prev.jpg) 50% 0 no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+
+    @media @xs {
+      padding: 30px 0;
+      width: auto;
+      height: auto;
+      background: linear-gradient(rgba(166, 66, 0, 0.75),rgba(253, 119, 0, 0.75)),
+                url(../img/bg/bg-fullscreen--xs__prev.jpg) 50% 0 no-repeat;
+    }
+  }
+
+  &__captions-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10%;
+    @media @xs {
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__mobile-logo {
+    .mobile-only();
+    display: block;
+    margin: 0 auto 30px;
+    width: 130px;
+    height: 45px;
+    background: url("../img/logos/header-logo--hor.svg") no-repeat;
+    background-size: contain;
+    text-indent: @over9000;
+  }
+
+  &__mobile-logo:hover {
+    background: url("../img/logos/header-logo--hor-blue.svg") no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 45px;
+    font-family: "Helios Cond", Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    @media @sm {
+      font-size: @h1 - @h1 / 4;
+    }
+    @media @xs {
+      margin-bottom: 35px;
+      font-size: @h1 - @h1 / 2;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    @media (max-width: 420px) {
+      font-size: @h1 - @h1 * 0.7;
+      letter-spacing: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+    font-family: 'Helios Cond', Helvetica, Arial, sans-serif;
+    font-size: 2.2em;
+    @media @sm {
+      font-size: 2em;
+    }
+    @media @xs {
+      font-size: 1.5em;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.top-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: rgba(220, 99, 8, 0.9);
+  .clearfix();
+
+  &__logo {
+    float: left;
+    display: block;
+    width: 130px;
+    height: 45px;
+    background: url("../img/logos/header-logo--hor.svg") no-repeat;
+    background-size: contain;
+    text-indent: @over9000;
+  }
+
+  &__logo:hover, {
+    background: url("../img/logos/header-logo--hor-blue.svg") no-repeat;
+    background-size: contain;
+  }
+
+  &__menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+
+  &__menu-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    @media @sm {
+      margin-right: 35px;
+    }
+  }
+
+  &__menu-item:last-child {
+    margin-right: 155px;
+    @media @sm {
+      margin-right: 100px;
+    }
+  }
+
+  &__menu-link {
+    display: block;
+    font-size: @menu-fz;
+    line-height: @menu-fz*2;
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    @media @sm {
+      font-size: @menu-fz - 4;
+    }
+  }
+
+  &__menu-link:hover,
+  &__menu-link:active {
+    color: #098ff5;
+    text-decoration: none;
+  }
+
+  &__menu-link:focus {
+    color: #0881dc;
+    text-decoration: none;
+  }
+
+  &__reg {
+    position: absolute;
+    right: -40px;
+    padding: 0 15px;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    font-size: @menu-fz;
+    line-height: @menu-fz*2;
+    color: #fff;
+    background-color: #0881dc;
+    box-shadow: -2px -3px 2px #666 inset;
+    transition: background 100ms linear;
+    @media @sm {
+      font-size: @menu-fz - 4;
+    }
+  }
+
+  &__reg&__reg--mobile {
+    .mobile-only();
+    position: static;
+    display: block;
+    width: 225px;
+    padding: 5px 15px;
+    margin: 0 auto;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: @menu-fz + 4;
+    overflow: hidden;
+  }
+
+  &__reg:hover {
+    background-color: #098ff5;
+  }
+
+  &__reg:active {
+    background-color: #085edc;
+    transform: translateY(1px);
+  }
+}

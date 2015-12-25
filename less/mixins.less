@@ -1,0 +1,22 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.mobile-only() {
+  @media @sm {
+    display: none;
+  }
+  @media @md {
+    display: none;
+  }
+  @media @lg {
+    display: none;
+  }
+}

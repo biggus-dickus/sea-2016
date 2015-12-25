@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 77.346 77.344" xml:space="preserve" height="77.344px" width="77.346px" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 77.346 77.344">
+<switch>
+	<foreignObject y="0" x="0" height="1" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+	</foreignObject>
+	<g>
+		<g id="registration_block">
+							<path stroke="#333" stroke-width="2.9818" stroke-miterlimit="10" d="m67.05 62.697c13.266-15.672 11.323-39.131-4.351-52.4-15.67-13.268-39.132-11.32-52.399 4.348-13.273 15.676-11.324 39.129 4.348 52.4 15.673 13.271 39.133 11.324 52.402-4.348z" fill="none"/>
+			<g fill="#333">
+				<path d="m12.343 46.045v-10.836h-2.331v-3.233h2.331v-0.758c0-3 1.922-4.894 4.748-4.894 1.34 0 2.767 0.35 3.67 1.312l-1.398 2.185c-0.379-0.379-0.874-0.583-1.544-0.583-1.02 0-1.748 0.67-1.748 1.98v0.758h2.854v3.233h-2.854v10.836h-3.728z"/>
+				<path d="m20.818 46.045v-19.429h3.7v19.429h-3.7z"/>
+				<path d="m26.646 28.247c0-1.224 1.02-2.185 2.214-2.185 1.223 0 2.214 0.961 2.214 2.185s-0.991 2.214-2.214 2.214c-1.194 0-2.214-0.99-2.214-2.214zm0.378 17.798v-14.069h3.7v14.069h-3.7z"/>
+				<path d="m32.278 38.996c0-4.312 3.117-7.37 7.457-7.37 2.884 0 4.631 1.253 5.563 2.534l-2.417 2.272c-0.67-0.99-1.689-1.515-2.971-1.515-2.243 0-3.816 1.631-3.816 4.078 0 2.446 1.573 4.106 3.816 4.106 1.282 0 2.301-0.582 2.971-1.515l2.417 2.243c-0.932 1.311-2.68 2.563-5.563 2.563-4.34 0.003-7.457-3.056-7.457-7.396z"/>
+				<path d="m55.586 46.045l-3.729-5.418-1.689 1.806v3.612h-3.7v-19.429h3.7v11.622l5.331-6.263h4.544l-5.563 6.379 5.738 7.69h-4.632z"/>
+				<path d="m61.037 46.045v-14.069h3.7v1.923c0.99-1.253 2.738-2.272 4.486-2.272v3.612c-0.262-0.059-0.612-0.088-1.02-0.088-1.224 0-2.855 0.699-3.466 1.603v9.292h-3.7z"/>
+			</g>
+		</g>
+	</g>
+</switch>
+</svg>

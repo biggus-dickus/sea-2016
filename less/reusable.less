@@ -1,0 +1,42 @@
+.mob-hidden {
+	@media @xs {
+		display: none;
+	}
+}
+
+.font-normal {
+	font-weight: 400;
+}
+
+.row.row-center {
+  text-align: center;
+}
+
+.row.row--ib-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.col-ib {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+
+  @media @xs {
+    float: none;
+    display: block;
+  }
+
+  &&--marg-15:nth-of-type(odd) {
+    margin-right: 15px;
+    @media @xs {
+      margin-right: 0;
+    }
+  }
+  &&--marg-15:nth-of-type(even) {
+    margin-left: 15px;
+    @media @xs {
+      margin-left: 0;
+    }
+  }
+}

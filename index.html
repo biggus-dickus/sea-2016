@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Образовательный уикенд: элитные школы мира</title>
+</head>
+<body>
+
+<!-- MODALS -->
+  <div id="comingSoon" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="comingSoon">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title text-center">Уже скоро! :-)</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="reg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabelReg" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="reg-title" id="modalLabelReg">
+            Регистрация на&nbsp;выставку
+            <mark class="reg-title  reg-title--marked">&laquo;ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Элитные школы мира&raquo;</mark>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="row row-center">
+            <div class="col-sm-11 col-ib">
+              <form action="index.php" method="post" class="sea-form">
+                <div class="form-group">
+                  <label for="parentName">ФИО родителя <span class="asterisk-required">*</span></label>
+          <input id="parentName" type="text" required class="form-control" name="parentName" data-error="Укажите ваше имя.">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <label for="parentEmail">E-mail родителя <span class="asterisk-required">*</span></label>
+                  <input type="email" id="parentEmail" required class="form-control" name="email" data-error="Укажите реально существующий адрес e-mail (напр., user@gmail.com).">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                <label for="parentPhone">Номер мобильного телефона родителя <span class="asterisk-required">*</span></label>
+                  <input type="tel" required id="parentPhone" name="phone" pattern="[0-9]{2} [0-9]{7}" class="form-control" data-error="Укажите действительный номер телефона в формате +380 XX XXXXXXX. Мы&nbsp;отправим на&nbsp;него смс с&nbsp;подтверждением регистрации и&nbsp;вашим персональным ID.">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <label for="study-programme">Какая образовательная программа Вас интересует:</label>
+                  <select id="study-programme" class="form-control" name="study-programme">
+                    <option value="null">&nbsp;</option>
+                    <option value="учеба в частной школе">учеба в частной школе</option>
+                    <option value="довузовская подготовка">довузовская подготовка</option>
+                    <option value="учеба в университете">учеба в университете</option>
+                    <option value="языковые курсы за рубежом">языковые курсы за рубежом</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="wheres">Откуда Вы узнали о выставке:</label>
+                  <select id="wheres" class="form-control" name="wheres">
+                    <option value="null">&nbsp;</option>
+                    <option>интернет</option>
+                    <option>наружная реклама (билборд, тролл и т. п.)</option>
+                    <option>e-mail или СМС-рассылка от DEC education</option>
+                    <option>являюсь клиентом DEC education</option>
+                    <option>рассказали друзья</option>
+                    <option id="myVariant">свой вариант</option>
+                  </select>
+                </div>
+                <div id="customFieldContainer" class="form-group hidden">
+                  <label for="wheresOther">Напишите ваш вариант</label>
+                  <input type="text" class="form-control" name="wheres_other" id="wheresOther" placeholder="Ваш вариант">
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input name="notifier_sms" type="checkbox" checked value="1">Подписаться на рассылку по sms
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input name="notifier_email" type="checkbox" checked value="1">Подписаться на рассылку по e-mail
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="submit" name="reg_user" class="btn btn-primary pull-right" value="Отправить">
+                </div>
+              </form>
+              <div class="reg-success hidden">
+                <h3 class="text-center">Регистрация успешна!</h3>
+                <p>В течение нескольких минут на указанные вами e-mail и телефон придет сообщение с персональным ID и дальнейшими инструкциями.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn  btn--sea-form" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="green-river" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="GreenRiverLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title text-center" id="GreenRiverLabel">Green River College (США)</h4>
+        </div>
+        <div class="modal-body  participant-card">
+          <div class="row">
+            <div class="col-sm-12">
+              <img class="participant-card__image" src="img/participants/pictures/grcc.jpg" height="334" width="500" alt="GRC">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12  participant-card__description">
+              <p>
+                Аккредитованный государственный 2-годичный колледж, основанный в&nbsp;1965 году и&nbsp;расположенный в&nbsp;45&nbsp;минутах езды к&nbsp;югу от&nbsp;Сиэтла. Сегодня здесь учится около 10&nbsp;000&nbsp;студентов, 1500 из&nbsp;которых&nbsp;&mdash; иностранцы, представляющие более 50&nbsp;стран. Выбирают GRC, в&nbsp;основном, из-за более низкой стоимости обучения, качественного образования, небольших учебных групп и&nbsp;преданных своему делу преподавателей. Сотрудники международного отдела оказывают приезжим профессиональную помощь по&nbsp;вопросам поступления, переезда и&nbsp;учебы. Внеклассная жизнь также активна и&nbsp;разнообразна, регулярно организуются полевые экспедиции по&nbsp;Сиэтлу и&nbsp;северо-западному побережью США.
+              </p>
+              <p>
+                <strong>Знаменитые выпускники:</strong> Марк Эммерт (исполнительный директор Национальной спортивной ассоциации колледжей, до&nbsp;этого&nbsp;&mdash; ректор Вашингтонского университета).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- /MODALS -->
+
+  <!-- Header & Navigation -->
+  <header class="header  header--fullscreen">
+    <nav class="top-nav  mob-hidden">
+      <div class="container  container--menu">
+        <a class="top-nav__logo" href="/" title="На главную">На&nbsp;главную</a>
+        <ul class="top-nav__menu">
+          <li class="top-nav__menu-item">
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#about">О&nbsp;выставке</a>
+          </li>
+          <li class="top-nav__menu-item">
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#programme">Программа</a>
+          </li>
+          <li class="top-nav__menu-item">
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#participants">Участники</a>
+          </li>
+          <li class="top-nav__menu-item">
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#contacts">Где пройдет</a>
+          </li>
+        </ul>
+        <button class="top-nav__reg" type="button" data-toggle="modal" data-target="#reg">Регистрация</button>
+      </div>
+    </nav>
+
+    <div class="header__captions-wrapper">
+      <a class="header__mobile-logo" href="" title="На главную">На&nbsp;главную</a>
+      <h1 class="header__title">ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Элитные школы мира</h1>
+
+      <p class="header__subtitle">
+        29&ndash;30&nbsp;января 2016, Киев, DEC place<br>
+        31&nbsp;января 2016, Одесса, гостиница &laquo;Бристоль&raquo;
+      </p>
+      <button class="top-nav__reg  top-nav__reg--mobile" type="button" data-toggle="modal" data-target="#reg">Регистрация</button>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- Section About -->
+    <section class="fair-section">
+      <div class="container">
+        <h2 class="fair-section__header" id="about">О&nbsp;выставке</h2>
+        <div class="row  about">
+          <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
+            <img class="about__rounded-pic" src="img/content/new-format.jpg" height="175" width="175" alt="Новый формат проведения">
+            <figcaption>
+              <h3 class="about__title">Новый формат проведения</h3>
+              <p>
+                Образовательный уикенд продлится три дня и&nbsp;охватит два города Украины&nbsp;&mdash; Киев и&nbsp;Одессу. Первый день будет полностью посвящен консультациям, а&nbsp;во&nbsp;второй и&nbsp;третий вы&nbsp;сможете также пообщаться с&nbsp;участниками, которые представляют рейтинговые школы, колледжи и&nbsp;университеты Западной Европы и&nbsp;Северной Америки.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
+            <img class="about__rounded-pic" src="img/content/selection.jpg" height="175" width="175" alt="Репрезентативная подборка участников">
+            <figcaption>
+              <h3 class="about__title">Репрезентативная подборка участников</h3>
+              <p>
+                3&nbsp;дня выставки, 15&nbsp;часов общения с&nbsp;экспертами DEC education и&nbsp;зарубежными гостями и&nbsp;более 10&nbsp;стран, которые будут представлять участники. А&nbsp;для всех желающих разобраться в&nbsp;особенностях учебы в&nbsp;Великобритании, США и&nbsp;Канаде мы&nbsp;подготовили специальные мероприятия&nbsp;&mdash; круглые столы.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
+            <img class="about__rounded-pic" src="img/content/comm.jpg" height="175" width="175" alt="Живое общение и&nbsp;море информации">
+            <figcaption>
+              <h3 class="about__title">Живое общение и&nbsp;море полезной информации</h3>
+              <p>
+                Специализация выставки&nbsp;&mdash; программы среднего образования и&nbsp;довузовской подготовки. Презентовать их&nbsp;приедут сотрудники более 30&nbsp;школ и&nbsp;подготовительных центров из&nbsp;Великобритании, Швейцарии, США, Канады и&nbsp;других стран. Все они&nbsp;&mdash; наши давние и&nbsp;надежные партнеры, которых мы&nbsp;рекомендуем клиентам.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section Programme -->
+    <section class="fair-section">
+      <div class="container">
+        <h2 class="fair-section__header" id="programme">Программа</h2>
+        <p class="fair-section__description">
+          Уикенд продлится три дня. Пятницу, 29&nbsp;января, мы&nbsp;целиком посвятим консультациям посетителей и&nbsp;круглым столам&nbsp;&mdash; новому для наших выставок формату общения. Суббота и&nbsp;воскресенье&nbsp;&mdash; собственно выставочные дни, в&nbsp;которых принимают участие все экспоненты.
+        </p>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="calendar-wrapper">
+          <span class="calendar  calendar--29">29</span>
+          <h3>29&nbsp;января, Киев</h3>
+          <h4>14:30&ndash;20:00</h4>
+        </div>
+          <p>
+            День продуктивного общения. Эксперты DEC education будут консультировать посетителей по&nbsp;вопросам обучения за&nbsp;рубежом, а&nbsp;также проведут три круглых стола, посвященных обсуждению особенностей образовательных систем Великобритании, США и&nbsp;Канады. В&nbsp;круглых столах также примут участие представители иностранных учебных заведений.
+          </p>
+          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Расписание</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="calendar-wrapper">
+            <span class="calendar  calendar--30">30</span>
+            <h3>30&nbsp;января, Киев</h3>
+            <h4>11:00&ndash;16:00</h4>
+          </div>
+          <p>
+            Выставочный день в&nbsp;Киеве. Более 20&nbsp;участников будут рады ответить на&nbsp;все ваши вопросы о&nbsp;зачислении, учебе, ценах и&nbsp;скидках, системах обучения, каникулярных программах и&nbsp;многом другом. Сотрудники DEC education будут также к&nbsp;услугам посетителей и&nbsp;при необходимости индивидуально проконсультируют по&nbsp;организационным и&nbsp;процедурным вопросам.
+          </p>
+          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Схема зала</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="calendar-wrapper">
+            <span class="calendar  calendar--31">31</span>
+            <h3>31&nbsp;января, Одесса</h3>
+            <h4>12:00&ndash;17:00</h4>
+          </div>
+          <p>
+            Выставочный день в&nbsp;Одессе. Пять часов живого общения с&nbsp;представителями зарубежных школ, колледжей и&nbsp;подготовительных центров, а&nbsp;также индивидуальные консультации экспертов DEC education. Обратите внимание: не&nbsp;все из&nbsp;заявленных экспонентов смогут принять участие во&nbsp;втором дне выставки в&nbsp;Одессе (подробнее&nbsp;&mdash; в&nbsp;разделе &laquo;<a href="#participants" data-anchor="smooth-scroll">Участники</a>&raquo;).
+          </p>
+          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Схема зала</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section Participants -->
+    <section class="fair-section  fair-section--participants">
+      <div class="container">
+        <h2 class="fair-section__header" id="participants">Участники</h2>
+        <p class="fair-section__description">Для получения краткой сводки об&nbsp;учебном заведении кликните по&nbsp;его логотипу.</p>
+
+         <!-- Nav tabs -->
+        <ul class="nav nav-tabs  nav-tabs--custom" role="tablist">
+          <li role="presentation" class="active">
+            <a class="custom-nav-tab" href="#schools" aria-controls="schools" role="tab" data-toggle="tab">Школы</a>
+          </li>
+          <li role="presentation">
+            <a class="custom-nav-tab" href="#prep-centres" aria-controls="prep-centres" role="tab" data-toggle="tab">Подготовительные центры</a>
+          </li>
+          <li role="presentation">
+            <a class="custom-nav-tab" href="#universities" aria-controls="universities" role="tab" data-toggle="tab">Университеты</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="schools">
+            <ul class="participants-list">
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/acs-cobham.png" height="100" width="150" alt="ACS Cobham International School">
+                  <figcaption class="participants-list__title">
+                    ACS Cobham International School
+                    <span class="participants-list__title participants-list__title--kiev-only">(только Киев)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/box-hill.png" height="100" width="150" alt="Box Hill School">
+                  <figcaption class="participants-list__title">Box Hill School</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/bromsgrove.png" height="100" width="150" alt="Bromsgrove School">
+                  <figcaption class="participants-list__title">Bromsgrove School</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/brookhouse.png" height="100" width="150" alt="Brook House College">
+                  <figcaption class="participants-list__title">Brook House College</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/ceg-cats.png" height="100" width="150" alt="CEG CATS College">
+                  <figcaption class="participants-list__title">Cambridge Education Group: CATS College</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/earlscliffe.png" height="100" width="150" alt="Earlscliffe College">
+                  <figcaption class="participants-list__title">
+                    Earlscliffe College
+                    <span class="participants-list__title participants-list__title--kiev-only">(только Киев)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/Glenalmond.png" height="100" width="150" alt="Glenalmond College">
+                  <figcaption class="participants-list__title">Glenalmond College</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-us" title="США">US</span>
+                  <img class="participants-list__logo" src="img/participants/logos/img.png" height="100" width="150" alt="IMG Academy">
+                  <figcaption class="participants-list__title">IMG Academy</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-ch" title="Швейцария">Switzerland</span>
+                  <img class="participants-list__logo" src="img/participants/logos/rosenberg.png" height="100" width="150" alt="Institut auf dem Rosenberg">
+                  <figcaption class="participants-list__title">Institut auf dem Rosenberg</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/nordanglia.png" height="100" width="150" alt="Nord Anglia Education">
+                  <figcaption class="participants-list__title">Nord Anglia Education</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-ca" title="Канада">Canada</span>
+                  <img class="participants-list__logo" src="img/participants/logos/pickering.png" height="100" width="150" alt="Pickering College">
+                  <figcaption class="participants-list__title">
+                    Pickering College
+                    <span class="participants-list__title participants-list__title--kiev-only">(только Киев)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/qe.png" height="100" width="150" alt="Queen Ethelburga's College">
+                  <figcaption class="participants-list__title">Queen Ethelburga&rsquo;s College</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/rydal.png" height="100" width="150" alt="Rydal Penrhos School">
+                  <figcaption class="participants-list__title">Rydal Penrhos School</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/skola.png" height="100" width="150" alt="SKOLA">
+                  <figcaption class="participants-list__title">SKOLA</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/taunton.png" height="101" width="150" alt="Taunton School International">
+                  <figcaption class="participants-list__title">Taunton School International</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/wycliffe.png" height="100" width="150" alt="Wycliffe College">
+                  <figcaption class="participants-list__title">Wycliffe College</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="prep-centres">
+            <ul class="participants-list">
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/ceg-oncampus.png" height="100" width="150" alt="CEG ONCAMPUS">
+                  <figcaption class="participants-list__title">Cambridge Education Group: ONCAMPUS</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/into.png" height="100" width="150" alt="INTO">
+                  <figcaption class="participants-list__title">INTO</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-us" title="США">US</span>
+                  <img class="participants-list__logo" src="img/participants/logos/into-usf.png" height="100" width="150" alt="INTO USF">
+                  <figcaption class="participants-list__title">INTO University of South Florida</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/kic.png" height="100" width="150" alt="Kaplan International Colleges">
+                  <figcaption class="participants-list__title">Kaplan International Colleges</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-world" title="Мир">World</span>
+                  <img class="participants-list__logo" src="img/participants/logos/study-group.png" height="100" width="150" alt="Study Group">
+                  <figcaption class="participants-list__title">Study Group</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="universities">
+            <ul class="participants-list">
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-gb" title="Великобритания">UK</span>
+                  <img class="participants-list__logo" src="img/participants/logos/cardiff-uni.png" height="100" width="150" alt="Cardiff University">
+                  <figcaption class="participants-list__title">Cardiff University</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box" data-toggle="modal" data-target="#green-river">
+                  <span class="flag flag-us" title="США">US</span>
+                  <img class="participants-list__logo" src="img/participants/logos/grc.png" height="100" width="150" alt="Green River College">
+                  <figcaption class="participants-list__title">Green River College</figcaption>
+                </figure>
+              </li>
+              <li class="participants-list__item">
+                <figure class="participants-list__box">
+                  <span class="flag flag-ch" title="Швейцария">Switzerland</span>
+                  <img class="participants-list__logo" src="img/participants/logos/seg.png" height="100" width="150" alt="Swiss Education Group">
+                  <figcaption class="participants-list__title">Swiss Education Group</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section Contacts -->
+    <section class="fair-section  fair-section--map">
+      <div class="container">
+        <h2 class="fair-section__header" id="contacts">Где пройдет</h2>
+        <div class="row  row--ib-container">
+          <div class="col-sm-5  col-ib  col-ib--marg-15">
+            <h3 class="map__header  map__header--text-right">Киев, ивент-центр DEC place</h3>
+            <p class="map__text  map__text--text-right">б-р Леси Украинки, 23б<br>
+            29 января: 14:30–20:00<br>
+            30 января: 11:00–16:00</p>
+          </div>
+          <div class="col-sm-5  col-ib  col-ib--marg-15">
+            <h3 class="map__header">Одесса, гостиница «Бристоль»</h3>
+            <p class="map__text">ул. Пушкинская, 15<br>
+            31 января: 12:00–17:00</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- radio buttons -->
+      <div class="map__radio-wrapper">
+        <input id="kiev-map" class="map__radio-button" type="radio" name="map-radio" value="1" checked>
+        <label for="kiev-map" class="map__radio-label" title="На карте Киева">Киев</label>
+        <input id="odessa-map" class="map__radio-button" type="radio" name="map-radio" value="2">
+        <label for="odessa-map" class="map__radio-label" title="На карте Одессы">Одесса</label>
+      </div>
+
+      <!-- maps -->
+      <div class="map" id="map-kiev"></div>
+      <div class="map" id="map-odessa"></div>
+    </section>
+  </main>
+
+
+
+  <!-- Section Footer -->
+  <footer class="dec-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="//dec-edu.com" class="dec-footer__logo">На главную</a>
+        </div>
+        <div class="col-sm-4">
+          <div class="dec-footer__central-wrapper">
+            <span class="dec-footer__phone">390-76-24</span>
+            <a href="//dec-edu.com" class="dec-footer__site">dec-edu.com</a>
+          </div>
+        </div>
+        <div class="col-sm-4  dec-footer__right-wrapper">
+          <a href="https://www.facebook.com/education.dec" target="_blank" title="Мы на Facebook" class="dec-footer__sn  dec-footer__sn--facebook">Мы&nbsp;в&nbsp;Фейсбуке</a>
+          <a href="http://vk.com/education_dec" target="_blank" title="Мы ВКонтакте" class="dec-footer__sn  dec-footer__sn--vk">Мы ВКонтакте</a>
+          <a href="https://www.youtube.com/user/DECEDUCOM" title="Мы на YouTube" target="_blank" class="dec-footer__sn  dec-footer__sn--youtube">Мы на&nbsp;YouTube</a>
+          <a href="https://www.flickr.com/photos/dec_group/sets" title="Мы на Flickr" target="_blank" class="dec-footer__sn  dec-footer__sn--flickr">Мы на&nbsp;Flickr</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="lib/jquery-1.11.3.min.js"></script>
+  <script src="lib/components.min.js"></script>
+  <script src="lib/validator.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeOoVYdl0LOTR3VPCwBsa297MbHVmDh9I&amp;region-UA&amp;callback=initMap"></script> -->
+
+</body>
+</html>

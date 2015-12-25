@@ -1,0 +1,148 @@
+.dec-footer {
+  padding: 35px 0 40px;
+  background-color: #656666;
+
+  &__logo {
+    display: block;
+    width: 236px;
+    height: 90px;
+    margin: 0 auto;
+    background: url("../img/logos/footer-logo.svg") no-repeat 0 0;
+    background-size: contain;
+    text-indent: @over9000;
+    @media @sm {
+      width: 200px;
+      height: 76px;
+    }
+    @media @xs {
+      max-width: 250px;
+      max-height: 95px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__central-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    @media @xs {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__phone,
+  &__site {
+    display: block;
+    min-height: 40px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #333333;
+    text-decoration: none;
+    @media @sm {
+      font-size: 18px;
+      background-size: 30px 30px;
+    }
+    @media @xs {
+      display: inline-block;
+      font-size: 30px;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 10px;
+    background: url("../img/icons/phone-icon.svg") no-repeat 0 50%;
+    @media @sm {
+      margin-bottom: 0;
+    }
+    @media @xs {
+      display: block;
+      width: 205px;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__site {
+    background: url("../img/icons/site-icon.svg") no-repeat 0 50%;
+  }
+
+  &__site:hover,
+  &__site:focus {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  &__right-wrapper {
+    @media @md {
+      min-height: 90px;
+      padding-top: 10px;
+    }
+    @media @sm {
+      min-height: 80px;
+      padding-top: 15px;
+    }
+    @media @xs {
+      text-align: center;
+    }
+  }
+
+  &__sn {
+    width: 77px;
+    height: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: @over9000;
+    @media @md {
+      width: 60px;
+      height: 60px;
+    }
+    @media @sm {
+      margin-right: 5px;
+      width: 45px;
+      height: 45px;
+    }
+    @media @xs {
+      margin-right: 5px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__sn:last-child {
+    margin-right: 0;
+  }
+
+  &__sn--facebook {
+    background-image: url("../img/icons/sn/fb.svg");
+  }
+
+  &__sn--flickr {
+    background-image: url("../img/icons/sn/flickr.svg");
+  }
+
+  &__sn--googleplus {
+    background-image: url("../img/icons/sn/g+.svg");
+  }
+
+  &__sn--instagram {
+    background-image: url("../img/icons/sn/instagram.svg");
+  }
+
+  &__sn--twitter {
+    background-image: url("../img/icons/sn/twitter.svg");
+  }
+
+  &__sn--vk {
+    background-image: url("../img/icons/sn/vk.svg");
+  }
+
+  &__sn--youtube {
+    background-image: url("../img/icons/sn/youtube.svg");
+  }
+}

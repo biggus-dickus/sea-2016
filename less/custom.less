@@ -1,0 +1,335 @@
+/* Tabs behavior correction */
+.nav-tabs.nav-tabs--custom {
+  border-color: #bbb;
+}
+
+li.active > a.custom-nav-tab,
+li.active > a.custom-nav-tab:hover,
+li.active > a.custom-nav-tab:focus {
+  background-color: @gray;
+  border-left-color: #bbb;
+  border-top-color: #bbb;
+  border-right-color: #bbb;
+}
+
+li > a.custom-nav-tab:hover {
+  border-bottom-color: #bbb;
+  background-color: #e3e4eb;
+}
+
+.container {
+
+  &&--menu {
+    position: relative;
+  }
+}
+
+.fair-section {
+  padding-top: 50px;
+  padding-bottom: 35px;
+
+  &&--participants {
+    background-color: @gray;
+    @media @sm {
+      padding-bottom: 15px;
+    }
+    @media @md {
+      padding-bottom: 15px;
+    }
+  }
+
+  &&--map {
+    padding-bottom: 0;
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: "Helios Cond", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: @orange;
+  }
+
+  &__description {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.5em;
+    font-weight: 100;
+    color: #000;
+  }
+}
+
+.about {
+
+  &__figure {
+    border-right: 1px dotted #ccc;
+    @media @lg {
+      padding: 0 25px;
+      min-height: 430px;
+    }
+    @media @xs {
+      margin-bottom: 35px;
+      text-align: center;
+      border-right: 0;
+    }
+  }
+
+  &__figure:last-child {
+    border-right: 0;
+  }
+
+  &__rounded-pic {
+    display: block;
+    width: 175px;
+    height: 175px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #f46440;
+    transition: all linear 0.2s;
+  }
+
+  &__rounded-pic:hover {
+    transform: scale(1.1);
+  }
+
+  &__title {
+    width: 75%;
+    margin: 0 auto 10px;
+    text-align: center;
+    font: 1.4em/1.5em "Helios Cond", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    @media @sm {
+      font-size: 1.2em;
+      width: auto;
+    }
+  }
+}
+
+.calendar-wrapper {
+  position: relative;
+  padding-left: 85px;
+  margin-bottom: 20px;
+  color: @orange;
+
+  & h3,
+  & h4 {
+    font-weight: 300;
+  }
+}
+
+.calendar {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 67px;
+  height: 67px;
+  background: url("../img/sprites/calendar.png") no-repeat;
+  text-indent: @over9000;
+
+  &&--29 {
+    background-position: 0 0;
+  }
+
+  &&--30 {
+    background-position: -67px 0;
+  }
+
+  &&--31 {
+    background-position: -134px 0;
+  }
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    @media @lg {
+      padding: 2%;
+    }
+    @media @sm {
+      width: 30%;
+      margin-bottom: 15px;
+      padding: 2%;
+    }
+     @media @md {
+      width: 30%;
+      padding: 1%;
+      margin-bottom: 15px;
+    }
+    @media @xs {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    min-height: 170px;
+    padding: 5px;
+  }
+
+  &__box:hover {
+    outline: 1px solid #ccc;
+    background-color: #eaecf7;
+    cursor: pointer;
+  }
+
+  &__box:hover > &__title {
+    color: #1a1a1a;
+  }
+
+  &__box:active {
+    background-color: #e3e8fe;
+  }
+
+
+  &__logo {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    height: 100px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 300;
+    color: #7c7c7c;
+  }
+
+  &__title&__title--kiev-only {
+    display: block;
+    color: #FF6E6E;
+  }
+}
+
+.map {
+  height: 500px;
+  background-color: #E9E5DC;
+
+  @media @sm {
+    height: 450px;
+  }
+
+  @media @xs {
+    height: 450px;
+  }
+
+  &__header {
+    margin-bottom: 15px;
+    text-align: left;
+    @media @xs {
+      text-align: center;
+    }
+  }
+
+  &__header--text-right {
+    text-align: right;
+  }
+
+  &__text {
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+    @media @xs {
+      text-align: center;
+    }
+  }
+
+  &__text--text-right {
+    text-align: right;
+  }
+
+  &__radio-wrapper {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__radio-button {
+    display: none;
+  }
+
+  &__radio-button:checked + &__radio-label {
+    background-color: @orange;
+    border: 2px solid #fff;
+  }
+
+  &__radio-label {
+    margin-right: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 1px @orange;
+    border-radius: 50%;
+    text-indent: @over9000;
+    cursor: pointer;
+  }
+
+  &__radio-label:last-child {
+    margin-right: 0;
+  }
+}
+
+.participant-card {
+
+  &__image {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto 25px;
+  }
+
+  &__description p {
+    padding: 0 15px;
+  }
+}
+
+.dnl-btn {
+  display: block;
+  max-width: 215px;
+  padding: 10px 15px;
+  margin: 30px auto;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.3em;
+  color: #49494C;
+  background: linear-gradient(#FFEBC4, #F7AF25);
+  box-shadow: -1px -1px 3px #bbb inset;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #3f3f42;
+    outline: none;
+  }
+
+  &:hover {
+    background: linear-gradient(#F7AF25, #FFEBC4);
+    box-shadow: 1px 1px 3px #bbb inset;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
