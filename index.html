@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Образовательный уикенд: элитные школы мира</title>
+  <title>Образовательный уикенд: частные школы за&nbsp;рубежом</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="reg-title" id="modalLabelReg">
             Регистрация на&nbsp;выставку
-            <mark class="reg-title  reg-title--marked">&laquo;ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Элитные школы мира&raquo;</mark>
+            <mark class="reg-title  reg-title--marked">&laquo;ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Частные школы за&nbsp;рубежом&raquo;</mark>
           </h4>
         </div>
         <div class="modal-body">
@@ -54,14 +54,29 @@
                   <input type="tel" required id="parentPhone" name="phone" pattern="[0-9]{2} [0-9]{7}" class="form-control" data-error="Укажите действительный номер телефона в формате +380 XX XXXXXXX. Мы&nbsp;отправим на&nbsp;него смс с&nbsp;подтверждением регистрации и&nbsp;вашим персональным ID.">
                   <div class="help-block with-errors"></div>
                 </div>
+
+                <div class="form-group">
+                  <h3 class="radio-label">Выберите город проведения:</h3>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="city" required>Киев
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="city" required>Одесса
+                    </label>
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <label for="study-programme">Какая образовательная программа Вас интересует:</label>
                   <select id="study-programme" class="form-control" name="study-programme">
                     <option value="null">&nbsp;</option>
-                    <option value="учеба в частной школе">учеба в частной школе</option>
-                    <option value="довузовская подготовка">довузовская подготовка</option>
-                    <option value="учеба в университете">учеба в университете</option>
-                    <option value="языковые курсы за рубежом">языковые курсы за рубежом</option>
+                    <option>учеба в частной школе</option>
+                    <option>довузовская подготовка</option>
+                    <option>учеба в университете</option>
+                    <option>языковые курсы за рубежом</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -154,7 +169,7 @@
       <div class="container  container--menu">
         <a class="top-nav__logo" href="/" title="На главную">На&nbsp;главную</a>
         <ul class="top-nav__menu">
-          <li class="top-nav__menu-item">
+          <li class="top-nav__menu-item  sm-hidden">
             <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#about">О&nbsp;выставке</a>
           </li>
           <li class="top-nav__menu-item">
@@ -164,7 +179,10 @@
             <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#participants">Участники</a>
           </li>
           <li class="top-nav__menu-item">
-            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#contacts">Где пройдет</a>
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#speakers">Докладчики</a>
+          </li>
+          <li class="top-nav__menu-item">
+            <a class="top-nav__menu-link" data-anchor="smooth-scroll" href="#contacts">Где и&nbsp;когда</a>
           </li>
         </ul>
         <button class="top-nav__reg" type="button" data-toggle="modal" data-target="#reg">Регистрация</button>
@@ -173,7 +191,9 @@
 
     <div class="header__captions-wrapper">
       <a class="header__mobile-logo" href="" title="На главную">На&nbsp;главную</a>
-      <h1 class="header__title">ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Элитные школы мира</h1>
+      <h1 class="header__title">ОБРАЗОВАТЕЛЬНЫЙ WEEKEND.<br>
+        Частные школы за&nbsp;рубежом
+      </h1>
 
       <p class="header__subtitle">
         29&ndash;30&nbsp;января 2016, Киев, DEC place<br>
@@ -183,42 +203,63 @@
     </div>
   </header>
 
-
+  <span id="about"></span>
   <main>
     <!-- Section About -->
     <section class="fair-section">
       <div class="container">
-        <h2 class="fair-section__header" id="about">О&nbsp;выставке</h2>
-        <div class="row  about">
+        <h2 class="fair-section__header">О&nbsp;выставке</h2>
+        <div class="row row-center about">
+          <div class="col-sm-10 col-ib about__description">
+            <p class="fair-section__description">ОБРАЗОВАТЕЛЬНЫЙ WEEKEND посвящен среднему образованию за&nbsp;рубежом. Он&nbsp;пройдет в&nbsp;Киеве и&nbsp;Одессе. В&nbsp;течение трех дней посетители узнают об&nbsp;особенностях учебы в&nbsp;Великобритании, США, Канаде, Швейцарии, смогут задать вопросы, пообщаться с&nbsp;представителями престижных школ, подготовительных центров и&nbsp;вузов.</p>
+            <div class="line"></div>
+            <div class="about__list-section">
+              <h4>Вам будет интересно, если:</h4>
+              <ul>
+                <li>вы&nbsp;— родитель, обеспокоенный будущим ребенка; </li>
+                <li>вы&nbsp;хотите отправить ребенка на&nbsp;учебу за&nbsp;рубеж; </li>
+                <li> вы&nbsp;рассматриваете только рейтинговые школы, колледжи, университеты Западной Европы или Северной Америки; </li>
+                <li> вы&nbsp;планируете поступление ребенка в&nbsp;зарубежный университет.</li>
+              </ul>
+              <p class="about__disclaimer">На&nbsp;выставке не&nbsp;освещаются темы грантов и&nbsp;стипендиальных программ.</p>
+            </div>
+            <div class="line"></div>
+            <!-- <p class="fair-section__description">На&nbsp;выставке не&nbsp;освещаются темы грантов и&nbsp;стипендиальных программ.</p> -->
+          </div>
           <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
             <img class="about__rounded-pic" src="img/content/new-format.jpg" height="175" width="175" alt="Новый формат проведения">
             <figcaption>
-              <h3 class="about__title">Новый формат проведения</h3>
-              <p>
-                Образовательный уикенд продлится три дня и&nbsp;охватит два города Украины&nbsp;&mdash; Киев и&nbsp;Одессу. Первый день будет полностью посвящен консультациям, а&nbsp;во&nbsp;второй и&nbsp;третий вы&nbsp;сможете также пообщаться с&nbsp;участниками, которые представляют рейтинговые школы, колледжи и&nbsp;университеты Западной Европы и&nbsp;Северной Америки.
-              </p>
+              <h3 class="about__title">Новый формат общения</h3>
+              <p class="text-left">Чтобы сделать общение полезным и&nbsp;информативным, в&nbsp;первый день выставки мы&nbsp;проведем круглые столы, в&nbsp;ходе которых ответим на&nbsp;часто задаваемые вопросы. Родители получат консультации специалистов и&nbsp;пообщаются с&nbsp;представителями школ, колледжей, университетов Западной Европы и&nbsp;Северной Америки.</p>
             </figcaption>
           </figure>
           <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
             <img class="about__rounded-pic" src="img/content/selection.jpg" height="175" width="175" alt="Репрезентативная подборка участников">
             <figcaption>
-              <h3 class="about__title">Репрезентативная подборка участников</h3>
-              <p>
-                3&nbsp;дня выставки, 15&nbsp;часов общения с&nbsp;экспертами DEC education и&nbsp;зарубежными гостями и&nbsp;более 10&nbsp;стран, которые будут представлять участники. А&nbsp;для всех желающих разобраться в&nbsp;особенностях учебы в&nbsp;Великобритании, США и&nbsp;Канаде мы&nbsp;подготовили специальные мероприятия&nbsp;&mdash; круглые столы.
-              </p>
+              <h3 class="about__title">Индивидуальные консультации</h3>
+              <p class="text-left">Посетители получат как минимум 15&nbsp;часов общения с&nbsp;экспертами DEC education, представителями школ, ведущими специалистами по&nbsp;программам среднего образования из&nbsp;более 10&nbsp;стран.</p>
             </figcaption>
           </figure>
           <figure class="col-xs-12  col-sm-4  col-md-4  about__figure">
             <img class="about__rounded-pic" src="img/content/comm.jpg" height="175" width="175" alt="Живое общение и&nbsp;море информации">
             <figcaption>
-              <h3 class="about__title">Живое общение и&nbsp;море полезной информации</h3>
-              <p>
-                Специализация выставки&nbsp;&mdash; программы среднего образования и&nbsp;довузовской подготовки. Презентовать их&nbsp;приедут сотрудники более 30&nbsp;школ и&nbsp;подготовительных центров из&nbsp;Великобритании, Швейцарии, США, Канады и&nbsp;других стран. Все они&nbsp;&mdash; наши давние и&nbsp;надежные партнеры, которых мы&nbsp;рекомендуем клиентам.
-              </p>
+              <h3 class="about__title">Исчерпывающая информация</h3>
+              <p class="text-left">На&nbsp;выставке мы&nbsp;расскажем о&nbsp;программах среднего образования и&nbsp;довузовской подготовки. Презентации проведут сотрудники более 30&nbsp;школ и&nbsp;подготовительных центров из&nbsp;Великобритании, Швейцарии, США, Канады. Все они&nbsp;&mdash; наши давние и&nbsp;надежные партнеры.</p>
             </figcaption>
           </figure>
+          <p class="fair-section__description">
+          Вход на&nbsp;выставку свободный, по&nbsp;предварительной регистрации:
+          </p>
+          <button class="btn-custom" type="button" data-toggle="modal" data-target="#reg">Зарегистрироваться</button>
         </div>
+
+        <figure class="about__youtube">
+          <iframe src="//www.youtube.com/embed/Ol-Be1Vkucw?html5=1&amp;showinfo=0" allowfullscreen=""></iframe>
+          <figcaption>Видео с прошлогодней выставки</figcaption>
+        </figure>
+
       </div>
+      <span id="programme"></span>
     </section>
 
 
@@ -226,45 +267,53 @@
     <!-- Section Programme -->
     <section class="fair-section">
       <div class="container">
-        <h2 class="fair-section__header" id="programme">Программа</h2>
+        <h2 class="fair-section__header">Программа</h2>
         <p class="fair-section__description">
           Уикенд продлится три дня. Пятницу, 29&nbsp;января, мы&nbsp;целиком посвятим консультациям посетителей и&nbsp;круглым столам&nbsp;&mdash; новому для наших выставок формату общения. Суббота и&nbsp;воскресенье&nbsp;&mdash; собственно выставочные дни, в&nbsp;которых принимают участие все экспоненты.
         </p>
 
-        <div class="col-xs-12 col-sm-4 col-md-4">
-        <div class="calendar-wrapper">
-          <span class="calendar  calendar--29">29</span>
-          <h3>29&nbsp;января, Киев</h3>
-          <h4>14:30&ndash;20:00</h4>
-        </div>
-          <p>
-            День продуктивного общения. Эксперты DEC education будут консультировать посетителей по&nbsp;вопросам обучения за&nbsp;рубежом, а&nbsp;также проведут три круглых стола, посвященных обсуждению особенностей образовательных систем Великобритании, США и&nbsp;Канады. В&nbsp;круглых столах также примут участие представители иностранных учебных заведений.
-          </p>
-          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Расписание</a>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div class="calendar-wrapper">
-            <span class="calendar  calendar--30">30</span>
-            <h3>30&nbsp;января, Киев</h3>
-            <h4>11:00&ndash;16:00</h4>
+        <div class="row  fair-section__calendar">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="calendar-wrapper">
+              <span class="calendar  calendar--29">29</span>
+              <h3>29&nbsp;января, Киев</h3>
+              <h4>14:30&ndash;20:00</h4>
+            </div>
+            <p>
+              День продуктивного общения и&nbsp;консультаций. Впервые в&nbsp;Украине мы&nbsp;проведем три круглых стола на&nbsp;тему особенностей и&nbsp;преимуществ образовательных систем Великобритании, США и&nbsp;Канады. Докладчиками выступят представители иностранных учебных заведений и&nbsp;ведущие эксперты DEC education. Приглашаем родителей участвовать и&nbsp;задавать вопросы.
+            </p>
+            <a class="dnl-link" href="#" data-toggle="modal" data-target="#comingSoon">Загрузить расписание &dArr;</a>
           </div>
-          <p>
-            Выставочный день в&nbsp;Киеве. Более 20&nbsp;участников будут рады ответить на&nbsp;все ваши вопросы о&nbsp;зачислении, учебе, ценах и&nbsp;скидках, системах обучения, каникулярных программах и&nbsp;многом другом. Сотрудники DEC education будут также к&nbsp;услугам посетителей и&nbsp;при необходимости индивидуально проконсультируют по&nbsp;организационным и&nbsp;процедурным вопросам.
-          </p>
-          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Схема зала</a>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div class="calendar-wrapper">
-            <span class="calendar  calendar--31">31</span>
-            <h3>31&nbsp;января, Одесса</h3>
-            <h4>12:00&ndash;17:00</h4>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="calendar-wrapper">
+              <span class="calendar  calendar--30">30</span>
+              <h3>30&nbsp;января, Киев</h3>
+              <h4>11:00&ndash;16:00</h4>
+            </div>
+            <p>
+              Гости пообщаются лично с&nbsp;представителями рейтинговых зарубежных школ, узнают о&nbsp;зачислении, учебе, ценах, условиях проживания, каникулярных программах. Эксперты DEC education помогут определиться с&nbsp;учебной программой и&nbsp;подберут оптимальную в&nbsp;зависимости от&nbsp;требований родителей.
+            </p>
+            <a class="dnl-link" href="#" data-toggle="modal" data-target="#comingSoon">Загрузить схему зала &dArr;</a>
           </div>
-          <p>
-            Выставочный день в&nbsp;Одессе. Пять часов живого общения с&nbsp;представителями зарубежных школ, колледжей и&nbsp;подготовительных центров, а&nbsp;также индивидуальные консультации экспертов DEC education. Обратите внимание: не&nbsp;все из&nbsp;заявленных экспонентов смогут принять участие во&nbsp;втором дне выставки в&nbsp;Одессе (подробнее&nbsp;&mdash; в&nbsp;разделе &laquo;<a href="#participants" data-anchor="smooth-scroll">Участники</a>&raquo;).
-          </p>
-          <a class="dnl-btn" href="#" data-toggle="modal" data-target="#comingSoon">Схема зала</a>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="calendar-wrapper">
+              <span class="calendar  calendar--31">31</span>
+              <h3>31&nbsp;января, Одесса</h3>
+              <h4>12:00&ndash;17:00</h4>
+            </div>
+            <p>
+              Впервые в&nbsp;Одессе пройдёт выставка, посвященная образованию за&nbsp;рубежом, в&nbsp;которой примут участие престижные и&nbsp;рейтинговые учебные заведения. В&nbsp;течении пяти часов посетители получат полную информацию от&nbsp;экспертов DEC education и&nbsp;представителей более 20&nbsp;известных зарубежных школ, колледжей, подготовительных центров из&nbsp;Западной Европы и&nbsp;Северной Америки.
+            </p>
+            <a class="dnl-link" href="#" data-toggle="modal" data-target="#comingSoon">Загрузить схему зала &dArr;</a>
+          </div>
         </div>
+
+        <p class="fair-section__description">
+          Зарегистрируйтесь сейчас, чтобы не&nbsp;тратить время в&nbsp;очереди на&nbsp;входе!
+        </p>
+        <button class="btn-custom" type="button" data-toggle="modal" data-target="#reg">Зарегистрироваться</button>
       </div>
+      <span id="participants"></span>
     </section>
 
 
@@ -272,7 +321,7 @@
     <!-- Section Participants -->
     <section class="fair-section  fair-section--participants">
       <div class="container">
-        <h2 class="fair-section__header" id="participants">Участники</h2>
+        <h2 class="fair-section__header">Участники</h2>
         <p class="fair-section__description">Для получения краткой сводки об&nbsp;учебном заведении кликните по&nbsp;его логотипу.</p>
 
          <!-- Nav tabs -->
@@ -480,7 +529,25 @@
             </ul>
           </div>
         </div>
+        <p class="fair-section__description">
+          Вход на&nbsp;выставку свободный, по&nbsp;предварительной регистрации:
+        </p>
+        <button class="btn-custom" type="button" data-toggle="modal" data-target="#reg">Зарегистрироваться</button>
       </div>
+    <span id="speakers"></span>
+    </section>
+
+
+
+    <!-- Section Speakers -->
+    <section class="fair-section">
+      <div class="container">
+        <h2 class="fair-section__header">Докладчики</h2>
+        <div class="row">
+          <p class="text-center">Информация будет добавлена в&nbsp;январе.</p>
+        </div>
+      </div>
+      <span id="contacts"></span>
     </section>
 
 
@@ -488,7 +555,7 @@
     <!-- Section Contacts -->
     <section class="fair-section  fair-section--map">
       <div class="container">
-        <h2 class="fair-section__header" id="contacts">Где пройдет</h2>
+        <h2 class="fair-section__header">Где и когда</h2>
         <div class="row  row--ib-container">
           <div class="col-sm-5  col-ib  col-ib--marg-15">
             <h3 class="map__header  map__header--text-right">Киев, ивент-центр DEC place</h3>
@@ -537,7 +604,7 @@
         </div>
         <div class="col-sm-4  dec-footer__right-wrapper">
           <a href="https://www.facebook.com/education.dec" target="_blank" title="Мы на Facebook" class="dec-footer__sn  dec-footer__sn--facebook">Мы&nbsp;в&nbsp;Фейсбуке</a>
-          <a href="http://vk.com/education_dec" target="_blank" title="Мы ВКонтакте" class="dec-footer__sn  dec-footer__sn--vk">Мы ВКонтакте</a>
+          <a href="https://www.instagram.com/dec_education/" target="_blank" title="Мы в Instagram" class="dec-footer__sn  dec-footer__sn--instagram">Мы в Instagram</a>
           <a href="https://www.youtube.com/user/DECEDUCOM" title="Мы на YouTube" target="_blank" class="dec-footer__sn  dec-footer__sn--youtube">Мы на&nbsp;YouTube</a>
           <a href="https://www.flickr.com/photos/dec_group/sets" title="Мы на Flickr" target="_blank" class="dec-footer__sn  dec-footer__sn--flickr">Мы на&nbsp;Flickr</a>
         </div>

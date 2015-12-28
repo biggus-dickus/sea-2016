@@ -4,8 +4,9 @@
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(166, 66, 0, 0.75),rgba(253, 119, 0, 0.75)),
-                url(../img/bg/bg-fullscreen__prev.jpg) 50% 0 no-repeat;
+    background: linear-gradient(rgba(175, 175, 175, 0.2), rgba(125, 125, 125, 0.25)),
+                url("../img/bg/bg-fullscreen.jpg") 50% 0 no-repeat;
+    background-color: #eee;
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
@@ -14,8 +15,8 @@
       padding: 30px 0;
       width: auto;
       height: auto;
-      background: linear-gradient(rgba(166, 66, 0, 0.75),rgba(253, 119, 0, 0.75)),
-                url(../img/bg/bg-fullscreen--xs__prev.jpg) 50% 0 no-repeat;
+      background: linear-gradient(rgba(175, 175, 175, 0.2), rgba(125, 125, 125, 0.25)),
+                  url("../img/bg/bg-fullscreen--xs.jpg") 50% 0 no-repeat;
     }
   }
 
@@ -23,7 +24,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 10%;
+    width: 100%;
+    color: #000;
+    text-shadow:
+                -2px -2px 0 #fff,
+                2px -2px 0 #fff,
+                -2px 2px 0 #fff,
+                2px 2px 0 #fff;
     @media @xs {
       position: static;
       transform: none;
@@ -36,14 +43,8 @@
     margin: 0 auto 30px;
     width: 130px;
     height: 45px;
-    background: url("../img/logos/header-logo--hor.svg") no-repeat;
-    background-size: contain;
+    background: url("../img/sprites/header-logos.svg") 0 0 no-repeat;
     text-indent: @over9000;
-  }
-
-  &__mobile-logo:hover {
-    background: url("../img/logos/header-logo--hor-blue.svg") no-repeat;
-    background-size: contain;
   }
 
   &__title {
@@ -81,6 +82,11 @@
       margin-bottom: 35px;
     }
   }
+
+  &-subtitle-patch {
+    padding: 4px 0;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 .top-nav {
@@ -90,7 +96,8 @@
   z-index: 1;
   padding: 10px 0;
   box-sizing: border-box;
-  background-color: rgba(220, 99, 8, 0.9);
+  background-color: rgba(248, 177, 2, 0.9);
+  box-shadow: 0 -1px 0 1px rgba(0, 0, 0, 0.05) inset;
   .clearfix();
 
   &__logo {
@@ -98,14 +105,12 @@
     display: block;
     width: 130px;
     height: 45px;
-    background: url("../img/logos/header-logo--hor.svg") no-repeat;
-    background-size: contain;
+    background: url("../img/sprites/header-logos.svg") 0 0 no-repeat;
     text-indent: @over9000;
   }
 
   &__logo:hover, {
-    background: url("../img/logos/header-logo--hor-blue.svg") no-repeat;
-    background-size: contain;
+    background: url("../img/sprites/header-logos.svg") 0 -45px no-repeat;
   }
 
   &__menu {
@@ -120,8 +125,11 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 50px;
-    @media @sm {
+    @media @md {
       margin-right: 35px;
+    }
+    @media @sm {
+      margin-right: 25px;
     }
   }
 
@@ -136,9 +144,13 @@
     display: block;
     font-size: @menu-fz;
     line-height: @menu-fz*2;
-    color: #f9f9f9;
+    color: #fff;
+    text-shadow: 1px 1px 0 #777;
     text-decoration: none;
     transition: color 0.1s linear;
+    @media @md {
+      font-size: @menu-fz - 2;
+    }
     @media @sm {
       font-size: @menu-fz - 4;
     }
@@ -146,13 +158,15 @@
 
   &__menu-link:hover,
   &__menu-link:active {
-    color: #098ff5;
+    color: #333;
+    text-shadow: none;
     text-decoration: none;
   }
 
   &__menu-link:focus {
-    color: #0881dc;
+    color: #333;
     text-decoration: none;
+    text-shadow: none;
   }
 
   &__reg {
@@ -160,13 +174,14 @@
     right: -40px;
     padding: 0 15px;
     border: 0;
-    border-radius: 3px;
+    border-radius: 2px;
     outline: 0;
     font-size: @menu-fz;
-    line-height: @menu-fz*2;
-    color: #fff;
-    background-color: #0881dc;
-    box-shadow: -2px -3px 2px #666 inset;
+    font-weight: 300;
+    line-height: @menu-fz * 2;
+    color: #000;
+    background-color: #ececec;
+    box-shadow: -2px -2px 3px #bbb inset;
     transition: background 100ms linear;
     @media @sm {
       font-size: @menu-fz - 4;
@@ -180,6 +195,7 @@
     width: 225px;
     padding: 5px 15px;
     margin: 0 auto;
+    background-color: @yellow;
     box-shadow: none;
     border-radius: 0;
     font-size: @menu-fz + 4;
@@ -187,11 +203,22 @@
   }
 
   &__reg:hover {
-    background-color: #098ff5;
+    background-color: #fff;
+  }
+
+  &__reg&__reg--mobile:hover {
+    background-color: #f8c602;
   }
 
   &__reg:active {
-    background-color: #085edc;
+    color: @text-color;
+    background-color: #dfdfdf;
     transform: translateY(1px);
+    box-shadow: 2px 2px 3px #bbb inset;
+  }
+
+  &__reg&__reg--mobile:active {
+    background-color: #f89d02;
+    color: #000;
   }
 }

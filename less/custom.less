@@ -17,6 +17,14 @@ li > a.custom-nav-tab:hover {
   background-color: #e3e4eb;
 }
 
+.line {
+  width: 100%;
+  max-width: 140px;
+  margin: 35px auto;
+  height: 1px;
+  background-color: #000000;
+}
+
 .container {
 
   &&--menu {
@@ -51,7 +59,7 @@ li > a.custom-nav-tab:hover {
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: @orange;
+    color: #000;
   }
 
   &__description {
@@ -62,15 +70,64 @@ li > a.custom-nav-tab:hover {
     font-weight: 100;
     color: #000;
   }
+
+  &__calendar {
+    margin-bottom: 35px;
+  }
 }
 
 .about {
+  margin-bottom: 35px;
+
+  &__description {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  &__list-section {
+    padding: 5px 75px 5px;
+    @media @xs {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    font-size: 18px;
+    font-weight: 300;
+
+    h4 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+
+    li {
+      position: relative;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      background-color: @orange;
+    }
+  }
+
+  &__disclaimer {
+    font-size: 14px;
+    font-style: italic;
+  }
 
   &__figure {
     border-right: 1px dotted #ccc;
+    margin-bottom: 35px;
     @media @lg {
       padding: 0 25px;
-      min-height: 430px;
+      min-height: 400px;
     }
     @media @xs {
       margin-bottom: 35px;
@@ -90,7 +147,7 @@ li > a.custom-nav-tab:hover {
     margin: 0 auto 15px;
     border-radius: 50%;
     padding: 2px;
-    border: 2px solid #f46440;
+    border: 2px solid @orange;
     transition: all linear 0.2s;
   }
 
@@ -99,7 +156,6 @@ li > a.custom-nav-tab:hover {
   }
 
   &__title {
-    width: 75%;
     margin: 0 auto 10px;
     text-align: center;
     font: 1.4em/1.5em "Helios Cond", Arial, sans-serif;
@@ -111,17 +167,34 @@ li > a.custom-nav-tab:hover {
       width: auto;
     }
   }
+
+  &__youtube {
+    text-align: center;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 300;
+    color: #777;
+
+    iframe {
+      display: block;
+      width: 85%;
+      border: 0;
+      margin: 0 auto;
+      height: 450px;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .calendar-wrapper {
   position: relative;
   padding-left: 85px;
   margin-bottom: 20px;
-  color: @orange;
 
   & h3,
   & h4 {
     font-weight: 300;
+    color: #f0ab00;
   }
 }
 
@@ -303,16 +376,38 @@ li > a.custom-nav-tab:hover {
   }
 }
 
-.dnl-btn {
+.dnl-link {
+  display: inline-block;
+  padding: 5px 0;
+  color: @orange;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken(@orange, 7%);
+    outline: none;
+  }
+
+  @media @xs {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+.btn-custom {
   display: block;
   max-width: 215px;
   padding: 10px 15px;
-  margin: 30px auto;
+  margin: 0 auto 30px;
   border: none;
   border-radius: 3px;
   text-align: center;
   font-size: 1.3em;
-  color: #49494C;
+  font-weight: 300;
+  color: #333;
   background: linear-gradient(#FFEBC4, #F7AF25);
   box-shadow: -1px -1px 3px #bbb inset;
   overflow: hidden;
@@ -320,7 +415,6 @@ li > a.custom-nav-tab:hover {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: #3f3f42;
     outline: none;
   }
 
