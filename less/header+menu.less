@@ -43,16 +43,11 @@
   }
 
   &__title {
-    width: auto;
-    max-width: 70%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto 45px;
+    margin-top: 0;
     font-family: "Helios Cond", Arial, Helvetica, sans-serif;
     font-size: 80px;
     font-weight: 400;
     text-align: center;
-    background-color: rgba(248, 177, 2, 0.85);
     @media @sm {
       font-size: @h1 - @h1 / 4;
     }
@@ -68,13 +63,48 @@
     }
   }
 
+  &__title&__title--main {
+    margin-bottom: 30px;
+    @media @xs {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__mark {
+    position: relative;
+    background-color: rgba(248, 177, 2, 0.85);
+  }
+
+  &__mark::before {
+    @media @lg {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -200px;
+      width: 180px;
+      height: 180px;
+      background: url("../img/logos/header-logo--ver.svg") 0 0 no-repeat;
+    }
+  }
+
+  &__title&__title--secondary {
+    margin-bottom: 45px;
+  }
+
   &__subtitle {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 50%;
     text-align: center;
     font-family: 'Helios Cond', Helvetica, Arial, sans-serif;
     font-size: 2.2em;
     font-weight: 700;
     color: #c85918;
+    background-color: rgba(255, 255, 255, 0.65);
+
+    @media @lg {
+      width: 600px;
+      padding: 10px 5px;
+    }
     @media @sm {
       font-size: 2em;
     }
@@ -82,11 +112,6 @@
       font-size: 1.5em;
       margin-bottom: 35px;
     }
-  }
-
-  &-subtitle-patch {
-    padding: 4px 0;
-    background-color: rgba(255, 255, 255, 0.75);
   }
 }
 
