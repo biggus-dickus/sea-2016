@@ -96,7 +96,7 @@ $('a[data-anchor="smooth-scroll"]').click(function() {
   $(regForm).validator();
 
   // Setting the phone mask
-  $('#parentPhone').mask('00 0000000');
+  $('#parentPhone').mask('000 0000000');
 
   phone.onfocus = function() {
     this.classList.add('form-control--phone-mask');
