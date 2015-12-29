@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Добро пожаловать в DEC school! В начале каждого семестра мы радушно принимаем юных и взрослых студентов, которым интересно изучение английского в Киеве с комфортом и по настоящей британской методике.">
+  <meta name="description" content="Приглашаем на дни открытых дверей в DEC school. В начале каждого семестра мы радушно принимаем юных и взрослых студентов, которым интересно изучение английского в Киеве с комфортом и по настоящей британской методике.">
   <meta name="author" content="">
 
   <title>Набор на второй семестр в DEC school</title>
@@ -12,37 +13,45 @@
   <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
-  <link href="../css/dod/dod-main.min.css" rel="stylesheet">
+  <link href="../css/dod/styles.css" rel="stylesheet" media="screen">
+  <link href="../css/dod/tilda-grid-2.0.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="../css/dod/regform.css">
   <link rel="stylesheet" href="../fonts/font-awesome-4.4.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   <script src="../js/dod/jquery-1.10.2.min.js"></script>
   <script src="../js/dod/tilda-scripts-2.2.js"></script>
-    {!! Html::script('js/admin/plugins/input-mask/jquery.inputmask.js') !!}
-    {!! Html::script('js/admin/plugins/input-mask/jquery.inputmask.date.extensions.js') !!}
-    {!! Html::script('js/admin/plugins/input-mask/jquery.inputmask.extensions.js') !!}
-    {!! Html::style('js/plugins/magnificPopup/magnific-popup.css') !!}
-    {!! Html::script('js/plugins/magnificPopup/jquery.magnific-popup.min.js') !!}
-    {!! Html::script('js/plugins/buttonLoader/jquery.buttonLoader.min.js') !!}
-    {!! Html::script('js/main.js') !!}
-    {!! Html::script('js/bootstrap.min.js') !!}
-    {!! Html::style('css/bootstrap-forms.css') !!}
+  <script src="http://dec-school.com/js/admin/plugins/input-mask/jquery.inputmask.js"></script>
+
+    <script src="http://dec-school.com/js/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+
+    <script src="http://dec-school.com/js/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+    <link media="all" type="text/css" rel="stylesheet" href="http://dec-school.com/js/plugins/magnificPopup/magnific-popup.css">
+
+    <script src="http://dec-school.com/js/plugins/magnificPopup/jquery.magnific-popup.min.js"></script>
+
+    <script src="http://dec-school.com/js/plugins/buttonLoader/jquery.buttonLoader.min.js"></script>
+
+    <script src="http://dec-school.com/js/main.js"></script>
+
+    <script src="http://dec-school.com/js/bootstrap.min.js"></script>
+
+    <link media="all" type="text/css" rel="stylesheet" href="http://dec-school.com/css/bootstrap-forms.css">
+
 </head>
 
 <body style="margin:0px;">
-
 <!-- Google Tag Manager -->
-<noscript>
-  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PF4PW7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PF4PW7');
-</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PF4PW7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PF4PW7');</script>
 <!-- End Google Tag Manager -->
+
 
   <!-- cover -->
 
@@ -66,7 +75,7 @@
                   <span style="color: rgb(31, 73, 125);">
                     <span style="font-weight: 700;">
                       <span style="color: rgb(255, 255, 255);">
-                        DEC school набирает студентов на&nbsp;второй семестр
+                        Набор студентов на&nbsp;второй семестр открыт!
                       </span>
                       <span style="color: rgb(127, 96, 0);"></span>
                     </span>
@@ -77,7 +86,7 @@
                 <span style="color: rgb(31, 73, 125);">
                   <span style="font-weight: 600;">
                     <span style="color: rgb(255, 255, 255);">
-                      Начало занятий&nbsp;&mdash; 11&nbsp;января
+                      Обучение: 11 января — 28 мая 2016
                     </span>
                   </span>
                 </span>
@@ -91,6 +100,8 @@
     </div>
 
   </div>
+
+</div>
 
 <div id="rec2466104" class="r" style="padding-top:75px;padding-bottom:75px;background-color:#ffffff; "  data-record-type="36"  >
 
@@ -232,10 +243,8 @@
         </div>
         <div class="lr_col_4">
           <div class="text">
-            <span style="color: rgb(31, 73, 125); font-weight: 600;">
-              Подготовка к&nbsp;ВНО<br>
-              (начало&nbsp;&mdash; 18&nbsp;января)
-            </span>
+            <span style="color: rgb(31, 73, 125); font-weight: 600;">Подготовка к&nbsp;ВНО<br>
+      (начало&nbsp;&mdash; 18&nbsp;января)</span>
             <br>
             <br>
             36-часовой месячный курс для учеников выпускных классов. Наши профессиональные репетиторы помогут как следует подготовиться к&nbsp;одному из&nbsp;профильных школьных экзаменов. Курс сочетает практику решения разноуровневых тестовых заданий с&nbsp;рассмотрением эффективных экзаменационных стратегий. Количество мест ограничено.
@@ -243,13 +252,11 @@
         </div>
         <div class="lr_col_4">
           <div class="text">
-            <span style="color: rgb(31, 73, 125); font-weight: 600;">
-              Подготовка к&nbsp;IELTS<br>
-              (начало&nbsp;&mdash; 8&nbsp;февраля)
-            </span>
+            <span style="color: rgb(31, 73, 125); font-weight: 600;">Подготовка к&nbsp;IELTS<br>
+      (начало&nbsp;&mdash; 8&nbsp;февраля)</span>
             <br>
             <br>
-            36-часовой месячный курс предназначен для старшеклассников с&nbsp;уровнем английского Intermediate и&nbsp;выше. Учебный план содержит аналогичные экзаменационным тексты и&nbsp;задания и&nbsp;ставит целью комплексную подготовку слушателей ко&nbsp;всем четырем экзаменационным секциям IELTS Academic&nbsp;— аудированию, чтению, письму и&nbsp;устной теме. Количество мест ограничено.
+            36-часовой месячный курс предназначен для старшеклассников с&nbsp;уровнем английского Intermediate и&nbsp;выше. Учебный план содержит аналогичные экзаменационным тексты и&nbsp;задания и&nbsp;ставит целью комплексную подготовку слушателей ко&nbsp;всем четырем экзаменационным секциям IELTS Academic&nbsp;&mdash; аудированию, чтению, письму и&nbsp;устной теме. Количество мест ограничено.
           </div>
         </div>
       </div>
@@ -418,14 +425,14 @@
 <div class="container-mini thumb-pad1">
   <h3>Запись на&nbsp;второй семестр в&nbsp;DEC school</h3>
   <form name = "lp_form" method="post" class="top17 left">
-    {!! Form::token() !!}
+    <input name="_token" type="hidden" value="0Hl1D8cBFYcJG1eepDk94M0EVUTblZi2s6QVZc9j">
 
     <div class="form-group">
       <label class = "control-label" for="school">Месторасположение школы</label>
       <select name="school" class="form-control" id="school">
-        <option value="null">Выберите школу</option>
-        <option>DEC school в Голосеево</option>
-        <option>DEC school на Печерске</option>
+        <option value="">Выберите школу</option>
+        <option value="DEC school в Голосеево">DEC school в Голосеево</option>
+        <option value="DEC school на Печерске">DEC school на Печерске</option>
       </select>
     </div>
 
@@ -458,7 +465,7 @@
       </select>
       <input name="where_other" class="form-control" placeholder="Введите свой вариант" type="text" id="where_other" style="display: none"></div>
     <div class = "form-group center marg25px">
-      {!! Form::button('Отправить', ['class' => 'btn-default btn1 send_dod has-spinner']) !!}
+      <button class="btn-default btn1 send_lp has-spinner" type="button">Отправить</button>
     </div>
   </form>
 </div>
@@ -558,9 +565,6 @@
 
 
 </script>
-@section('scripts')
-
-@stop
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
