@@ -28,50 +28,57 @@
     </div>
   </div>
 
-    <div id="reg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabelReg" aria-hidden="true">
+  <div id="reg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabelReg" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="reg-title" id="modalLabelReg">
             Регистрация на&nbsp;выставку
-            <mark class="reg-title  reg-title--marked">&laquo;ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Частные школы за&nbsp;рубежом&raquo;</mark>
+            <mark class="reg-title  reg-title--marked">
+              &laquo;ОБРАЗОВАТЕЛЬНЫЙ WEEKEND. Частные школы за&nbsp;рубежом&raquo;
+            </mark>
           </h4>
         </div>
         <div class="modal-body">
           <div class="row row-center">
-            <div class="col-sm-11 col-ib">
+            <div id="messageContainer" class="col-sm-11 col-ib">
               <form action="index.php" method="post" class="sea-form">
                 <div class="form-group">
-                  <label for="parentName">ФИО родителя <span class="asterisk-required">*</span></label>
-          <input id="parentName" type="text" required class="form-control" name="parentName" data-error="Укажите ваше имя.">
+                  <label for="parentName">
+                    ФИО родителя
+                    <span class="asterisk-required">*</span>
+                  </label>
+                  <input id="parentName" type="text" required class="form-control" name="parentName" data-error="Укажите ваше имя.">
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                  <label for="parentEmail">E-mail родителя <span class="asterisk-required">*</span></label>
+                  <label for="parentEmail">
+                    E-mail родителя
+                    <span class="asterisk-required">*</span>
+                  </label>
                   <input type="email" id="parentEmail" required class="form-control" name="email" data-error="Укажите реально существующий адрес e-mail (напр., user@gmail.com).">
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                <label for="parentPhone">Номер мобильного телефона родителя <span class="asterisk-required">*</span></label>
+                  <label for="parentPhone">
+                    Номер мобильного телефона родителя
+                    <span class="asterisk-required">*</span>
+                  </label>
                   <input type="tel" required id="parentPhone" name="phone" pattern="[0-9]{3} [0-9]{7}" class="form-control" data-error="Укажите действительный номер телефона в формате +38 XXX XXXXXXX. Мы&nbsp;отправим на&nbsp;него смс с&nbsp;подтверждением регистрации и&nbsp;вашим персональным ID.">
                   <div class="help-block with-errors"></div>
                 </div>
-
                 <div class="form-group">
                   <h3 class="radio-label">Выберите город проведения:</h3>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="city" required>Киев
-                    </label>
+                      <input type="radio" name="city" value="Киев" required>Киев</label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="city" required>Одесса
-                    </label>
+                      <input type="radio" name="city" value="Одесса" required>Одесса</label>
                   </div>
                 </div>
-
                 <div class="form-group">
                   <label for="study-programme">Какая образовательная программа Вас интересует:</label>
                   <select id="study-programme" class="form-control" name="study-programme">
@@ -96,30 +103,23 @@
                 </div>
                 <div id="customFieldContainer" class="form-group hidden">
                   <label for="wheresOther">Напишите ваш вариант</label>
-                  <input type="text" class="form-control" name="wheres_other" id="wheresOther" placeholder="Ваш вариант">
-                </div>
+                  <input type="text" class="form-control" name="wheres_other" id="wheresOther" placeholder="Ваш вариант"></div>
                 <div class="form-group">
                   <div class="checkbox">
                     <label>
-                      <input name="notifier_sms" type="checkbox" checked value="1">Подписаться на рассылку по sms
-                    </label>
+                      <input name="notifier_sms" type="checkbox" checked value="1">Подписаться на рассылку по sms</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="checkbox">
                     <label>
-                      <input name="notifier_email" type="checkbox" checked value="1">Подписаться на рассылку по e-mail
-                    </label>
+                      <input name="notifier_email" type="checkbox" checked value="1">Подписаться на рассылку по e-mail</label>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="submit" name="reg_user" class="btn btn-primary pull-right" value="Отправить">
-                </div>
+                  <input type="submit" name="reg" id="submitButton" class="btn btn-primary pull-right" value="Отправить"></div>
               </form>
-              <div class="reg-success hidden">
-                <h3 class="text-center">Регистрация успешна!</h3>
-                <p>В течение нескольких минут на указанные вами e-mail и телефон придет сообщение с персональным ID и дальнейшими инструкциями.</p>
-              </div>
+
             </div>
           </div>
         </div>
@@ -268,8 +268,8 @@
       <div class="container">
         <h2 class="fair-section__header">Программа</h2>
         <div class="row  row-center  programme">
-          <p class="col-sm-10  col-ib  programme__about">
-            Мероприятие продлится три дня: два в&nbsp;Киеве и&nbsp;один&nbsp;&mdash; в&nbsp;Одессе. Пятницу, 29&nbsp;января, мы&nbsp;целиком посвятим ответам на&nbsp;актуальные и&nbsp;часто задаваемые вопросы родителей об&nbsp;обучении за&nbsp;рубежом. С&nbsp;этой целью мы&nbsp;организуем круглые столы, во&nbsp;время которых вы&nbsp;сможете задать вопросы представителям зарубежных школ и&nbsp;экспертам по&nbsp;программам среднего образования. В&nbsp;субботу, 30&nbsp;января, в&nbsp;Киеве и&nbsp;в&nbsp;воскресенье, 31&nbsp;января, в&nbsp;Одессе выставка будет проходить в&nbsp;традиционном формате личных встреч и&nbsp;консультаций с&nbsp;зарубежными гостями и&nbsp;экспертами DEC education.
+          <p class="col-sm-10  col-ib  programme__about text-center">
+            Программа каждого дня выставки отличается.
           </p>
         </div>
         <div class="row  fair-section__calendar">

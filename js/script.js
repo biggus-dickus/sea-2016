@@ -86,7 +86,7 @@ $('a[data-anchor="smooth-scroll"]').click(function() {
 // Form scripts
 (function() {
   var regForm = document.querySelector('.sea-form');
-  var regSuccess = document.querySelector('.reg-success');
+  var messageContainer = document.getElementById('messageContainer');
   var submitButton = document.getElementById('submitButton');
   var phone = regForm['parentPhone'];
   var wheres = regForm['wheres'];
@@ -111,6 +111,18 @@ $('a[data-anchor="smooth-scroll"]').click(function() {
     }
   });
 
+  // Notifying user of submit success by requesting the external file contents
+  function reportSuccess(url) {
+    var xhrSuccess = new XMLHttpRequest();
+
+    xhrSuccess.onreadystatechange = function() {
+      messageContainer.innerHTML = xhrSuccess.responseText;
+    };
+
+    xhrSuccess.open('GET', url);
+    xhrSuccess.send();
+  }
+
   // Sending via xhr
   if (!('FormData' in window)) {
     return;
@@ -124,14 +136,15 @@ $('a[data-anchor="smooth-scroll"]').click(function() {
       var data = new FormData(regForm);
       var xhr = new XMLHttpRequest();
 
-      xhr.open('POST', 'http://dec-edu.com/sea-2016/index.php');
+      xhr.open('POST', 'index.php');
       xhr.addEventListener('readystatechange', function() {
         if (xhr.readyState === 4) {
           regForm.classList.add('hidden');
-          regSuccess.classList.remove('hidden');
         }
       });
       xhr.send(data);
+
+      reportSuccess('success.html');
     }
   });
 })();
