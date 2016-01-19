@@ -193,13 +193,23 @@
     font-size: @menu-fz;
     font-weight: 300;
     line-height: @menu-fz * 2;
-    color: #000;
-    background-color: #ececec;
-    box-shadow: -2px -2px 3px #bbb inset;
     transition: background 100ms linear;
     @media @sm {
       font-size: @menu-fz - 4;
     }
+  }
+
+  &__reg&__reg--plain {
+    color: #000;
+    background-color: #ececec;
+    box-shadow: -2px -2px 3px #bbb inset;
+  }
+
+  &__reg&__reg--red {
+    color: #fff;
+    background-color: #E74C3C;
+    box-shadow: 0 -3px #BD3E31 inset;
+    text-shadow: 0 -2px #BD3E31;
   }
 
   &__reg&__reg--mobile {
@@ -216,19 +226,30 @@
     overflow: hidden;
   }
 
-  &__reg:hover {
+  &__reg&__reg--plain:hover {
     background-color: #fff;
+  }
+
+  &__reg&__reg--red:hover {
+    background-color: #FB4532;
   }
 
   &__reg&__reg--mobile:hover {
     background-color: #f8c602;
   }
 
-  &__reg:active {
+  &__reg&__reg--plain:active {
     color: @text-color;
     background-color: #dfdfdf;
     transform: translateY(1px);
     box-shadow: 2px 2px 3px #bbb inset;
+  }
+
+  &__reg&__reg--red:active {
+    transform: translateY(1px);
+    color: #ddd;
+    text-shadow: none;
+    box-shadow: none;
   }
 
   &__reg&__reg--mobile:active {

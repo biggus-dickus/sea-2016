@@ -145,6 +145,11 @@ $('a[data-anchor="smooth-scroll"]').click(function() {
       xhr.send(data);
 
       reportSuccess('success.html');
+      dataLayer.push({
+        'event': 'gaTriggerEvent',
+        'gaEventCategory': 'send-weekend',
+        'gaEventAction': 'pagewiew-weekend'
+      });
     }
   });
 })();
